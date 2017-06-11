@@ -1,0 +1,7 @@
+.module-a {
+  background: green;
+}
+
+.module-a::after {
+  content: '.css file loaded';
+}

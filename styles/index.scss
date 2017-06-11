@@ -1,0 +1,14 @@
+@import "module-b";
+@import "module-c";
+
+body {
+  background: #e7e7e7;
+}
+
+body:fullscreen {
+  background: #222;
+}
+
+.success {
+  background: green;
+}

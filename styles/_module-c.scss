@@ -1,0 +1,8 @@
+.module-c{
+  background: green;
+
+  &::after {
+    content: '.scss file loaded';
+  }
+
+}
