@@ -17,7 +17,8 @@ module.exports = function (settings) {
     output: {
       path: path.resolve(settings.root, 'dist'),
       filename: `[chunkhash]/[name].js`,
-      chunkFilename: '[chunkhash]/[name].js'
+      chunkFilename: '[chunkhash]/[name].js',
+      publicPath: '/'
     },
     module: {
       rules: [
@@ -44,7 +45,7 @@ module.exports = function (settings) {
     plugins: [
       new ProgressBar(),
       new webpack.DefinePlugin({
-        API_ROOT: JSON.stringify('/')
+        API_ROOT: JSON.stringify('/api')
       }),
       new Favicons({
         logo: path.resolve(settings.root, 'assets/js.png'),

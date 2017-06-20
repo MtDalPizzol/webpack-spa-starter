@@ -23,7 +23,7 @@ imgBig.width = 170
 imgBig.classList.add('img--big')
 r.appendChild(imgBig)
 
-axios.get(`${API_ROOT}users`)
+axios.get(`${API_ROOT}/users`)
   .then((data) => {
     console.log(data)
   })

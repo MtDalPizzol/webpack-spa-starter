@@ -11,11 +11,17 @@ module.exports = function (settings) {
 
     devServer: {
 
+      publicPath: 'http://localhost:8080/',
+
+      historyApiFallback: true,
+
       proxy: {
-        '/': {
-          target: 'http://localhost:8081/'
+        '/api': {
+          target: 'http://localhost:8081/',
+          pathRewrite: {'^/api': ''}
         }
       },
+
 
       // overlay: true is equivalent
       overlay: {
